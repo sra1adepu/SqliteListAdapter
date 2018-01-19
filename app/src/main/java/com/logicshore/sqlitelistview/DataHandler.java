@@ -72,7 +72,7 @@ public class DataHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(KEY_ID,i);
+        values.put(KEY_ID,i);//  i use this in case of Cursor Adapter
         values.put(KEY_NAME, s);
         values.put(KEY_PS_WO, s1);
 
