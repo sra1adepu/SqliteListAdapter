@@ -39,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
                 Cursor c= db.getAllContacts();
                 while (c.moveToNext()){
                     Log.d("Username",c.getString(1));
-                    ListPojo listpojo= new ListPojo();
+                    ListPojo listpojo= new ListPojo();// Base Adaptor
                     listpojo.setUsername(c.getString(1));
                     listpojo.setPassword(c.getString(2));
                     listarray.add(listpojo);
 
-                   // CustomListAdapter cla= new CustomListAdapter(MainActivity.this,listarray);
-                    CustomListAdapter cla= new CustomListAdapter(MainActivity.this,c);
+                   // CustomListAdapter cla= new CustomListAdapter(MainActivity.this,listarray);// this is for Base Adaptor
+                    CustomListAdapter cla= new CustomListAdapter(MainActivity.this,c);// used for Cursor Adaptor
                     listitem.setAdapter(cla);
                 }
 
