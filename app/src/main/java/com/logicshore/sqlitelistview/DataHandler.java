@@ -23,7 +23,7 @@ public class DataHandler extends SQLiteOpenHelper {
     private static final String TABLE_CONTACTS = "contacts";
 
     // Contacts Table Columns names
-    private static final String KEY_ID = "_id";
+    private static final String KEY_ID = "_id";// incase of Cusrsor Adapter you have to use "_id" mandatort
     private static final String KEY_NAME = "name";
     private static final String KEY_PS_WO = "password";
 
